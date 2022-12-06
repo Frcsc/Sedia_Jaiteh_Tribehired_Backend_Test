@@ -6,6 +6,7 @@ app_name = 'posts'
 
 router = routers.DefaultRouter() 
 router.register(r'posts', api.PostViewset, basename="posts"),
+router.register(r'comments', api.CommentViewset, basename="comments"),
 
 urlpatterns = [
     path('', include(router.urls)),

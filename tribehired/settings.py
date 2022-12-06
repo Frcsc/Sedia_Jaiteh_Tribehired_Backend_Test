@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'ckeditor',
+    'django_filters',
     'posts',
 ]
 
@@ -55,6 +56,13 @@ MIDDLEWARE = [
 
 # HTTP Security
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+# REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+}
+
 
 ROOT_URLCONF = 'tribehired.urls'
 
