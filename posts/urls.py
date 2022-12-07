@@ -1,4 +1,4 @@
-from django.urls import include, path, re_path
+from django.urls import include, path
 from posts import api
 from rest_framework import routers
 
