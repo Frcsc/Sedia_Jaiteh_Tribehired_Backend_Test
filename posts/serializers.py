@@ -3,11 +3,11 @@ from posts.models import Post, Comment
 
 class PostSerializer(serializers.ModelSerializer):
 
-    total_number_of_comments = serializers.IntegerField()
+    total_number_of_comments = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Post
-        fields = ['id','title', 'body', 'total_number_of_comments']
+        fields = ['userId', 'id', 'title', 'body', 'total_number_of_comments']
 
 
 class CommentSerializer(serializers.ModelSerializer):
